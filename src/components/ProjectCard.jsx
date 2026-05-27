@@ -96,7 +96,7 @@ export default function ProjectCard({ project }) {
             >
               <span className="flex items-center space-x-1.5">
                 <Github className="w-5 h-3.5" />
-                <span>CODE</span>
+                <span>Link</span>
               </span>
             </TerminalButton>
           )}

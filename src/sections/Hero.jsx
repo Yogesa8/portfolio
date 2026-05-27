@@ -167,7 +167,7 @@ export default function Hero({ onNavigate, skipBoot = false }) {
               </TerminalButton>
               <TerminalButton 
                 variant="outline" 
-                onClick={() => window.open("/Yogesh_Jangra_Resume.pdf", "_blank")}
+                onClick={() => window.open("/yogesh_resume.pdf", "_blank")}
                 ariaLabel="Download resume PDF"
               >
                 [ DOWNLOAD_RESUME ]

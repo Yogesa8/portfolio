@@ -6,8 +6,8 @@ export const profileData = {
     email: "Jangiry035@gmail.com",
     phone: "+91 8198907329",
     github: "https://github.com/yogesa8",
-    linkedin: "https://www.linkedin.com/in/yogesh-jangra-sde", // Placeholder/Inferred
-    website: "https://yogesh.dev",
+    linkedin: "https://www.linkedin.com/in/yog-esh-081b03250/", // Placeholder/Inferred
+    website: "https://yogesa8.vercel.app/",
     summary: "Results-driven Software Development Engineer with 1+ years of experience developing responsive, high-performance web applications. Skilled in React.js, JavaScript, SQL, MongoDB, API integration, state management, and database optimization. Passionate about seamless user experiences and solving complex technical challenges.",
   },
   skills: [
@@ -99,7 +99,7 @@ export const profileData = {
       ],
       links: {
         live: "#",
-        code: "https://github.com/yogesa8/arcanum-space-drone"
+        code: "https://arcanumspace.com/"
       }
     },
     {
@@ -118,7 +118,7 @@ export const profileData = {
       ],
       links: {
         live: "#",
-        code: "https://github.com/yogesa8/job-portal"
+        code: "https://www.firstjobindia.in/"
       }
     },
     {
@@ -137,7 +137,7 @@ export const profileData = {
       ],
       links: {
         live: "#",
-        code: "https://github.com/yogesa8/flight-data-management"
+        code: ""
       }
     },
     {
@@ -156,7 +156,7 @@ export const profileData = {
       ],
       links: {
         live: "#",
-        code: "https://github.com/yogesa8/school-management-system"
+        code: ""
       }
     }
   ],

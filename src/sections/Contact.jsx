@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Mail, Phone, Terminal, RefreshCw, Send, Check } from "lucide-react";
+import { Mail, Phone, Terminal, RefreshCw, Send, Check, XCircle } from "lucide-react";
 import { profileData } from "../data/profile";
 import SectionHeader from "../components/SectionHeader";
 import TerminalWindow from "../components/TerminalWindow";
@@ -15,6 +15,7 @@ export default function Contact() {
   const [logs, setLogs] = useState([]);
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   const nameInputRef = useRef(null);
   const emailInputRef = useRef(null);
@@ -65,6 +66,7 @@ export default function Contact() {
     setIsSending(true);
     setLogs([]);
     setIsSent(false);
+    setSendError(false);
 
     const stages = [
       "ESTABLISHING CONTEXT BINDINGS...",
@@ -72,21 +74,41 @@ export default function Contact() {
       "RESOLVING SMTP HOST MX.GOOGLE.COM...",
       "AUTHENTICATING PORTAL CERTIFICATE HANDSHAKE...",
       "UPLOADING EMAIL PAYLOAD PACKETS...",
-      "TRANSMISSION COMPLETED SUCCESSFULLY."
     ];
 
     stages.forEach((stage, idx) => {
       setTimeout(() => {
         setLogs((prev) => [...prev, `[SMTP] ${stage}`]);
+
         if (idx === stages.length - 1) {
-          setIsSending(false);
-          setIsSent(true);
-          setCurrentStep(5);
-          
-          // Open default client mail app as fallback
-          const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-          const body = encodeURIComponent(message);
-          window.location.href = `mailto:${profileData.personal.email}?subject=${subject}&body=${body}`;
+          fetch("https://api.staticforms.dev/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              accessKey: "sf_27ee2566344efd11e2ad0540",
+              name,
+              email,
+              message,
+              subject: `Portfolio Inquiry from ${name}`,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.success) {
+                setLogs((prev) => [...prev, "[SMTP] TRANSMISSION COMPLETED SUCCESSFULLY."]);
+                setIsSending(false);
+                setIsSent(true);
+                setCurrentStep(5);
+              } else {
+                throw new Error(data.message || "Submission failed");
+              }
+            })
+            .catch(() => {
+              setLogs((prev) => [...prev, "[SMTP] ERROR: TRANSMISSION FAILED. RETRY OR USE DIRECT PORT."]);
+              setIsSending(false);
+              setSendError(true);
+              setCurrentStep(3);
+            });
         }
       }, (idx + 1) * 450);
     });
@@ -98,6 +120,7 @@ export default function Contact() {
     setMessage("");
     setLogs([]);
     setIsSent(false);
+    setSendError(false);
     setCurrentStep(0);
   };
 
@@ -237,15 +260,34 @@ export default function Contact() {
                 </div>
               )}
 
+              {/* Error State */}
+              {sendError && (
+                <div className="mt-4 border border-red-500 p-3 bg-red-950/20 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <XCircle className="w-4 h-4 text-red-400 shrink-0" />
+                    <span className="text-red-400 font-bold text-[11px]">[ TRANSMISSION_FAILED ] EXIT CODE: 1</span>
+                  </div>
+                  <div className="text-[11px] text-terminal-muted leading-relaxed">
+                    SMTP RELAY REJECTED PAYLOAD. SERVER RETURNED NON-200 RESPONSE.
+                  </div>
+                  <div className="text-[11px] text-terminal-amber">
+                    &gt; RE-ENTER MESSAGE ABOVE AND RETRY, OR USE DIRECT PORT BELOW.
+                  </div>
+                </div>
+              )}
+
               {/* Step 5: Completed */}
               {currentStep === 5 && (
-                <div className="mt-4 border border-terminal-green p-3 bg-neutral-900/40">
-                  <div className="text-white font-bold mb-1 flex items-center space-x-1.5">
-                    <Check className="w-4 h-4 text-terminal-green animate-pulse" />
-                    <span>[ TRANSMITTED_SUCCESS ]</span>
+                <div className="mt-4 border border-terminal-green p-3 bg-green-950/20 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-4 h-4 text-terminal-green shrink-0" />
+                    <span className="text-white font-bold text-[11px]">[ TRANSMITTED_SUCCESS ] EXIT CODE: 0</span>
                   </div>
-                  <div className="text-[11px] text-terminal-muted leading-tight">
-                    YOUR PAYLOAD DELIVERED SECURELY TO THE HOST GATEWAY. MAIL CLIENT INITIATED.
+                  <div className="text-[11px] text-terminal-muted leading-relaxed">
+                    PAYLOAD FROM <span className="text-terminal-green uppercase">{name}</span> DELIVERED SECURELY TO HOST GATEWAY.
+                  </div>
+                  <div className="text-[11px] text-terminal-amber">
+                    &gt; RESPONSE EXPECTED WITHIN 24–48 HRS. PRESS [RESET_SHELL] TO SEND ANOTHER.
                   </div>
                 </div>
               )}
