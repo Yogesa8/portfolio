@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Maximize2, Minimize2, X } from "lucide-react";
+import { useState } from "react";
 
 export default function TerminalWindow({ 
   title, 

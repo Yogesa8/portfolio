@@ -21,9 +21,11 @@ export default function ProjectCard({ project }) {
         return "text-terminal-amber border-terminal-amber";
 
       case "LIVE":
+      case "PRODUCTION":
       case "COMPLETED":
         return "text-terminal-green border-terminal-green";
 
+      case "IN PROGRESS":
       case "WORKING":
         return "text-cyan-400 border-cyan-400";
 

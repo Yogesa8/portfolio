@@ -1,23 +1,21 @@
-import React from "react";
 import { profileData } from "../data/profile";
 import SectionHeader from "../components/SectionHeader";
 import TerminalWindow from "../components/TerminalWindow";
 
 export default function About() {
+  const { personal } = profileData;
   const jsonProfile = JSON.stringify({
-    name: profileData.personal.name,
-    role: profileData.personal.role,
-    location: profileData.personal.location,
-    experience: "1+ Years",
-    focus: [
-      "Responsive Frontend Interfaces",
-      "API Aggregations & Integrations",
-      "Database Optimization & Modeling",
-      "Interactive Motion UX Design"
-    ],
-    stack: [
-      "React.js", "Redux", "Zustand", "Tailwind CSS", "MySQL", "MongoDB"
-    ]
+    name: personal.name,
+    role: personal.role,
+    location: personal.location,
+    email: personal.email,
+    phone: personal.phone,
+    website: personal.website,
+    github: personal.github,
+    linkedin: personal.linkedin,
+    experience: personal.experience,
+    availability: personal.availability,
+    specialization: personal.specialization
   }, null, 2);
 
   return (
@@ -39,27 +37,26 @@ export default function About() {
           <div className="space-y-4 text-xs md:text-sm leading-relaxed">
             <div className="text-white font-bold">// PROFESSIONAL LOG SUMMARY</div>
             <p className="text-neutral-300">
-              &gt; Yogesh is an engineer with hands-on experience translating complex functional requirements into responsive, production-ready web application features. 
-            </p>
-            <p className="text-neutral-300">
-              &gt; Specialized in structural frontend ecosystems like <span className="text-terminal-green text-glow font-bold">React.js</span>, state frameworks like <span className="text-terminal-amber font-semibold">Redux</span> and <span className="text-terminal-amber font-semibold">Zustand</span>, and backend nodes using MySQL and MongoDB.
+              &gt; {personal.summary}
             </p>
 
             <div className="border border-dashed border-terminal-muted p-3 mt-4 bg-neutral-950/40">
-              <div className="text-terminal-amber font-semibold uppercase text-xs mb-2">// SPECIALIZED DOMAINS:</div>
+              <div className="text-terminal-amber font-semibold uppercase text-xs mb-2">// PROFILE SIGNALS:</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-neutral-400 mb-3">
+                <div><span className="text-terminal-muted">EXPERIENCE:</span> {personal.experience}</div>
+                <div><span className="text-terminal-muted">AVAILABILITY:</span> {personal.availability}</div>
+                <div><span className="text-terminal-muted">LOCATION:</span> {personal.location}</div>
+                <div><span className="text-terminal-muted">ROLE:</span> {personal.role}</div>
+              </div>
+
+              <div className="text-terminal-amber font-semibold uppercase text-xs mb-2">// SPECIALIZATION:</div>
               <ul className="space-y-1.5 text-neutral-400">
-                <li>
-                  <span className="text-terminal-green mr-2">[+]</span>
-                  <strong className="text-white font-medium">Travel Engine API Integration:</strong> GDS and travel search API integrations (Kayak, Revelex).
-                </li>
-                <li>
-                  <span className="text-terminal-green mr-2">[+]</span>
-                  <strong className="text-white font-medium">State Synchronization:</strong> Redux/Zustand workflows for multi-step booking forms.
-                </li>
-                <li>
-                  <span className="text-terminal-green mr-2">[+]</span>
-                  <strong className="text-white font-medium">Database Structuring:</strong> Writing optimized queries for relational and document databases.
-                </li>
+                {personal.specialization.map((item) => (
+                  <li key={item}>
+                    <span className="text-terminal-green mr-2">[+]</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

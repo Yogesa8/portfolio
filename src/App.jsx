@@ -137,9 +137,9 @@ export default function App() {
           <div className="flex items-center justify-between gap-3 md:justify-start">
             <div className="flex items-center space-x-2">
               <span className="animate-ping w-2 h-2 rounded-full bg-terminal-green" />
-            <span className="text-white text-xs md:text-sm font-bold tracking-wider">
-              YOGESH
-            </span>
+              <span className="text-white text-xs md:text-sm font-bold tracking-wider">
+                {profileData.personal.name.toUpperCase()}
+              </span>
             </div>
             <button
               type="button"

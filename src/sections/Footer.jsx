@@ -1,8 +1,21 @@
 import  { useState, useEffect } from "react";
+import { profileData } from "../data/profile";
+
+const getWebsiteHost = (website) => {
+  if (!website) return `${profileData.personal.name.toLowerCase()}.dev`;
+
+  try {
+    return new URL(website).hostname;
+  } catch {
+    return website;
+  }
+};
 
 export default function Footer() {
   const [time, setTime] = useState("");
   const [simulatedLatency, setSimulatedLatency] = useState(12);
+  const terminalUser = profileData.personal.name.toLowerCase();
+  const host = getWebsiteHost(profileData.personal.website);
 
   // Live system clock simulation
   useEffect(() => {
@@ -51,7 +64,7 @@ export default function Footer() {
             [SESSION]
           </span>
           <span className="text-white px-3 py-2">
-            system@yogesh.dev:~$ uptime --portfolio
+            system@{host}:~$ uptime --portfolio
           </span>
           <span className="text-terminal-amber font-mono px-3 py-2 border-l border-terminal-muted">
             UPTIME: {getUptimeString()}
@@ -75,7 +88,7 @@ export default function Footer() {
 
       {/* Copy info */}
       <div className="text-center text-terminal-muted py-4 text-[10px]">
-        // NO RIGHTS RESERVED. SECURE DEPLOYMENT BY YOGESH. VER: 1.0.0-PROD
+        // NO RIGHTS RESERVED. SECURE DEPLOYMENT BY {terminalUser.toUpperCase()}. VER: 1.0.0-PROD
       </div>
     </footer>
   );

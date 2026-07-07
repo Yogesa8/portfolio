@@ -4,7 +4,15 @@ import SectionHeader from "../components/SectionHeader";
 import ProjectCard from "../components/ProjectCard";
 import TerminalButton from "../components/TerminalButton";
 
-const statusPriority = ["FREELANCE", "LIVE", "COMPLETED", "WORKING", "INTERNAL"];
+const statusPriority = [
+  "LIVE",
+  "IN PROGRESS",
+  "PRODUCTION",
+  "INTERNAL",
+  "COMPLETED",
+  "FREELANCE",
+  "WORKING",
+];
 const projectStatuses = Array.from(
   new Set(profileData.projects.map((project) => project.status).filter(Boolean)),
 ).sort((firstStatus, secondStatus) => {

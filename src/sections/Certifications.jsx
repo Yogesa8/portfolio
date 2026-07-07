@@ -1,5 +1,4 @@
-import React from "react";
-import { Award, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { profileData } from "../data/profile";
 import SectionHeader from "../components/SectionHeader";
 import TerminalWindow from "../components/TerminalWindow";
@@ -27,10 +26,10 @@ export default function Certifications() {
                 </h3>
               </div>
               <div className="text-[11px] text-terminal-amber uppercase font-mono mb-2">
-                ISSUED BY: {cert.authority} | INTEGRITY: [VERIFIED]
+                ISSUED BY: {cert.provider} | YEAR: {cert.year} | CREDENTIAL: {cert.credential} | INTEGRITY: [VERIFIED]
               </div>
               <p className="text-xs text-neutral-300 leading-relaxed pl-8 border-l border-terminal-muted">
-                {cert.details}
+                {cert.description}
               </p>
             </div>
           ))}

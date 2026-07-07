@@ -20,7 +20,8 @@ const Linkedin = (props) => (
   </svg>
 );
 
-const titleText = "SOFTWARE DEVELOPMENT ENGINEER";
+const titleText = profileData.personal.role.toUpperCase();
+const terminalUser = profileData.personal.name.toLowerCase();
 
 export default function Hero({ onNavigate, skipBoot = false }) {
   const [bootIndex, setBootIndex] = useState(() => skipBoot ? profileData.bootLogs.length : 0);
@@ -119,7 +120,7 @@ export default function Hero({ onNavigate, skipBoot = false }) {
           <div>
             {/* Command Input Prompt */}
             <div className="text-xs md:text-sm text-terminal-muted mb-4 select-none">
-              system@yogesh:~$ ./init_portfolio.sh --verbose
+              system@{terminalUser}:~$ ./init_portfolio.sh --verbose
               <br />
               [BOOT SUCCESSFUL] DEV PORTFOLIO SHELL MOUNTED.
             </div>
@@ -149,10 +150,30 @@ export default function Hero({ onNavigate, skipBoot = false }) {
               </div>
             </div>
 
-            {/* Description Summary */}
-            <p className="text-xs md:text-sm text-neutral-300 max-w-2xl leading-relaxed mb-8">
-              &gt; {profileData.personal.summary}
-            </p>
+            {/* Quick snapshot; full summary lives in the About section. */}
+            <div className="max-w-2xl mb-8 space-y-3 text-xs md:text-sm">
+              <div className="text-terminal-muted">// QUICK PROFILE SNAPSHOT:</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-neutral-300">
+                <div>
+                  <span className="text-terminal-muted">EXP:</span>{" "}
+                  {profileData.personal.experience}
+                </div>
+                <div>
+                  <span className="text-terminal-muted">STATUS:</span>{" "}
+                  {profileData.personal.availability}
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {profileData.personal.specialization.map((item) => (
+                  <span
+                    key={item}
+                    className="border border-dashed border-terminal-muted px-1.5 py-0.5 text-[10px] uppercase text-terminal-green"
+                  >
+                    #{item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Actions & Links */}

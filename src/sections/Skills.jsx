@@ -1,4 +1,3 @@
-import React from "react";
 import { profileData } from "../data/profile";
 import SectionHeader from "../components/SectionHeader";
 import SkillBar from "../components/SkillBar";

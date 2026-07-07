@@ -1,244 +1,389 @@
 export const profileData = {
   personal: {
     name: "Yogesh",
-    role: "Software Development Engineer",
+    role: "Frontend Engineer",
     location: "Delhi, India",
     email: "Jangiry035@gmail.com",
     phone: "+91 8198907329",
     github: "https://github.com/yogesa8",
-    linkedin: "https://www.linkedin.com/in/yog-esh-081b03250/", // Placeholder/Inferred
+    linkedin: "https://www.linkedin.com/in/yog-esh-081b03250/",
     website: "https://yogesa8.vercel.app/",
-    summary: "I’m a Software Development Engineer focused on building modern, high-performance web applications using React.js, JavaScript, SQL, and MongoDB. I have hands-on experience integrating third-party APIs, managing application state, optimizing database-driven workflows, and deploying production-ready applications. My work includes flight data management systems, job portal platforms, and school management solutions, with a strong focus on usability, scalability, and clean engineering practices.",
+    summary:
+      "Frontend Engineer with 2+ years of professional experience building responsive, scalable, and high-performance web applications using React.js, JavaScript, PHP, and modern frontend technologies. Experienced in developing production-ready user interfaces, integrating third-party REST APIs, implementing authentication systems, and creating reusable component architectures. I have contributed to travel booking platforms, airline reservation systems, recruitment portals, and interactive 3D web experiences, with a strong focus on performance, maintainability, accessibility, and exceptional user experience. Passionate about solving real-world business problems through clean code and modern web technologies, while continuously expanding my expertise in frontend engineering.",
+    availability: "Open to Remote & International Opportunities",
+    experience: "2+ Years",
+    specialization: [
+      "Frontend Development",
+      "React.js",
+      "JavaScript",
+      "REST API Integration",
+      "Responsive Web Applications"
+    ]
   },
   skills: [
     {
-      category: "FRONTEND DEPLOYMENT",
+      category: "FRONTEND DEVELOPMENT",
       items: [
-        { name: "React.js / Redux / Zustand", level: 90 },
-        { name: "JavaScript ES6+ / HTML5 / CSS3", level: 95 },
-        { name: "Tailwind CSS / shadcn/ui", level: 88 },
-        { name: "Aceternity UI / Styled Components", level: 80 },
-        { name: "Bootstrap 5 / Material UI", level: 85 },
-        { name: "JQuery / Axios", level: 90 },
+        { name: "React.js", level: 95 },
+        { name: "JavaScript (ES6+)", level: 95 },
+        { name: "HTML5 & CSS3", level: 95 },
+        { name: "Redux & Zustand", level: 90 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Bootstrap 5", level: 90 },
+        { name: "Material UI (MUI)", level: 85 },
+        { name: "shadcn/ui", level: 85 },
+        { name: "Aceternity UI", level: 80 },
+        { name: "Styled Components", level: 80 },
+        { name: "jQuery", level: 85 }
       ]
     },
+
     {
       category: "BACKEND & DATABASES",
       items: [
-        { name: "PHP", level: 75 },
-        { name: "MySQL / MariaDB", level: 82 },
-        { name: "MongoDB", level: 80 },
-        { name: "Node.js (Basic)", level: 60 },
-        { name: "Linux (Basic)", level: 60 },
+        { name: "PHP", level: 80 },
+        { name: "Node.js (Basic)", level: 65 },
+        { name: "MongoDB", level: 85 },
+        { name: "MySQL", level: 85 },
+        { name: "MariaDB", level: 80 }
       ]
     },
+
     {
-      category: "API INTEGRATION & AUTHENTICATION",
+      category: "API & AUTHENTICATION",
       items: [
-        { name: "RESTful API Integration", level: 88 },
-        { name: "Third-Party API Integration", level: 85 },
-        { name: "Google & GitHub Authentication", level: 80 }
+        { name: "REST API Integration", level: 90 },
+        { name: "Third-Party API Integration", level: 90 },
+        { name: "Axios", level: 90 },
+        { name: "AJAX", level: 88 },
+        { name: "Google OAuth", level: 85 },
+        { name: "GitHub OAuth", level: 85 }
       ]
     },
+
     {
-      category: "DEV TOOLS & UTILITIES",
+      category: "TOOLS & WORKFLOW",
       items: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "Postman", level: 85 },
-        { name: "FileZilla / PuTTY / FTP", level: 80 },
+        { name: "Git & GitHub", level: 92 },
+        { name: "Postman", level: 88 },
+        { name: "VS Code", level: 95 },
+        { name: "FileZilla", level: 85 },
+        { name: "PuTTY", level: 85 }
       ]
     },
+
     {
-      category: "AI & COGNITIVE UTILITIES",
+      category: "UI & MODERN WEB",
       items: [
-        { name: "ChatGPT / Claude / Gemini Prompting", level: 90 },
+        { name: "Responsive Web Design", level: 95 },
+        { name: "Three.js", level: 80 },
+        { name: "React Three Fiber", level: 78 },
+        { name: "Framer Motion", level: 80 },
+        { name: "Component-Based Architecture", level: 90 }
+      ]
+    },
+
+    {
+      category: "AI PRODUCTIVITY",
+      items: [
+        { name: "ChatGPT", level: 95 },
+        { name: "Claude", level: 90 },
+        { name: "Gemini", level: 90 }
       ]
     }
   ],
+
   experience: [
     {
       company: "Aero Flight Technology Group",
       location: "Delhi, India",
-      role: "Web Developer",
+      role: "Frontend Developer",
       period: "May 2024 - Present",
-      status: "ACTIVE",
+      status: "CURRENT",
+
+      tech: [
+        "React.js",
+        "JavaScript",
+        "PHP",
+        "MongoDB",
+        "REST APIs",
+        "Git",
+        "GitHub"
+      ],
       achievements: [
-        "Built dynamic, high-performance flight web applications using HTML, CSS, JavaScript, React.js, and MongoDB.",
-        "Successfully integrated complex third-party GDS and travel search APIs (Kayak and Revelex).",
-        "Collaborated on full-stack codebases, handling backend logic transitions and frontend components.",
-        "Employed Git/GitHub for robust version control and multi-developer deployment pipelines."
+        "Designed and developed production-ready frontend modules using React.js, JavaScript, HTML5, CSS3, and Bootstrap for travel booking applications.",
+        "Integrated third-party travel APIs including Kayak and Revelex to enable real-time flight search, booking, and reservation workflows.",
+        "Built reusable React components and responsive user interfaces to improve application maintainability and user experience.",
+        "Collaborated with backend systems by integrating REST APIs and MongoDB-based services for production features.",
+        "Developed and maintained internal operational portals including flight monitoring, PNR management, insurance tracking, and airline administration dashboards.",
+        "Maintained source code using Git and GitHub while working in a collaborative development environment."
       ]
     },
     {
-      company: "KMSG Tech Pvt Ltd",
+      company: "KMSG Tech Pvt. Ltd.",
       location: "Delhi, India",
       role: "Web Developer",
       period: "Jan 2023 - Jun 2023",
       status: "COMPLETED",
+      tech: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Git",
+        "Postman",
+        "React.js"
+      ],
       achievements: [
-        "Integrated third-party APIs into web applications to extend functionality and enable seamless data exchange.",
-        "Managed application deployment and server updates using FileZilla and PuTTY.",
-        "Used Git for version control, codebase management, and collaborative development workflows."
+        "Developed responsive web interfaces using HTML5, CSS3, JavaScript, Bootstrap, and PHP.",
+        "Integrated third-party REST APIs to enhance application functionality and improve frontend-backend communication.",
+        "Managed application deployment and server configuration using FileZilla and PuTTY.",
+        "Collaborated with team members using Git and GitHub for version control and project management."
       ]
     }
   ],
+
   projects: [
     {
       id: "arcanum-space",
-      title: "Arcanum Space Drone Website",
-      role: "Freelance Frontend Developer",
+      title: "Arcanum Space",
+      role: "Frontend Engineer",
       period: "2026",
-      status: "FREELANCE",
+      status: "LIVE",
       featured: true,
-      description: "A modern, responsive website built for Arcanum Space, a drone technology and UAV solutions brand focused on advanced aerospace, surveillance, mapping, and autonomous systems. The website delivers a smooth, premium visual experience with a futuristic interface, clean section flow, interactive animations, and a dedicated drone page featuring a 3D model presentation.",
-      tech: ["React.js", "Tailwind CSS", "Framer Motion", "Lucide Icons", "3D Model Integration"],
-      highlights: [
-        "Designed and developed a smooth, responsive landing experience for a drone technology and UAV solutions brand.",
-        "Integrated a 3D drone model on the drone page to create an interactive and premium product showcase.",
-        "Built futuristic UI sections with clean layouts, motion effects, icon-based feature blocks, and modern visual hierarchy.",
-        "Optimized the interface for desktop and mobile devices with a polished, user-friendly browsing experience."
+      category: "Corporate Website",
+
+      description:
+        "Designed and developed a modern corporate website for Arcanum Space, a drone technology company specializing in UAV solutions, aerospace innovation, surveillance, mapping, and autonomous systems. The platform delivers a premium digital experience through interactive 3D visualization, smooth animations, responsive layouts, and a scalable component-based architecture.",
+
+      tech: [
+        "React.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js",
+        "React Three Fiber"
       ],
+
+      highlights: [
+        "Designed and developed the complete frontend architecture using reusable React components.",
+        "Integrated interactive 3D drone visualization to create an engaging product showcase.",
+        "Built responsive layouts optimized for desktop, tablet, and mobile devices.",
+        "Implemented smooth page transitions and modern animations using Framer Motion.",
+        "Focused on clean UI, accessibility, maintainability, and performance optimization."
+      ],
+
       links: {
-        live: "#",
-        link: "https://arcanumspace.com/"
+        live: "https://arcanumspace.com/"
       }
     },
     {
       id: "job-portal",
-      title: "FirstJobIndia - Job Portal Website",
-      role: "Full Stack / React.js Developer",
+      title: "FirstJobIndia",
+      role: "Frontend Engineer",
       period: "2026",
-      status: "WORKING",
+      status: "IN PROGRESS",
       featured: true,
-      description: "A modern job portal platform built for freshers and early-career candidates, focused on job discovery, resume-building support, career guidance, and smooth application workflows. The platform includes responsive UI screens, OAuth-based authentication, dynamic job listing flows, and backend integration using Node.js, MariaDB, and Supabase.",
-      tech: ["React.js", "Zustand", "Node.js", "MariaDB", "Supabase", "OAuth", "Framer Motion", "Bootstrap"],
+      category: "Recruitment Platform",
+      description:
+        "A recruitment platform designed to help fresh graduates and early-career professionals discover jobs, build resumes, and apply through an intuitive application workflow. Built with React.js and modern frontend technologies while integrating secure authentication and backend services.",
+
+      tech: [
+        "React.js",
+        "Zustand",
+        "Bootstrap",
+        "Node.js",
+        "MariaDB",
+        "Supabase",
+        "OAuth"
+      ],
+
       highlights: [
-        "Developed a responsive job portal experience for freshers with job discovery, career guidance, and resume-building focused sections.",
-        "Implemented OAuth-based authentication flow for secure and user-friendly login access.",
-        "Built dynamic job listing and application workflow screens with clean state management using Zustand.",
-        "Integrated backend services using Node.js, MariaDB, and Supabase for managing platform data and user-related workflows.",
-        "Enhanced the user interface with smooth motion effects, clean layouts, and mobile-friendly responsive design."
+        "Designed responsive job discovery and application interfaces.",
+        "Implemented Google and GitHub OAuth authentication.",
+        "Built reusable React components with Zustand for efficient state management.",
+        "Integrated backend services for user profiles and job management.",
+        "Focused on responsive UI and user-friendly application workflows."
       ],
+
       links: {
-        live: "#",
-        link: "https://www.firstjobindia.in/"
+        live: "https://www.firstjobindia.in/"
       }
     },
     {
-      "id": "flight-data",
-      "title": "Flight Data Management System",
-      "role": "Full Stack Developer",
-      "period": "2025",
-      "status": "COMPLETED",
-      "featured": false,
-      "category": "Internal Operations Platform",
-      "description": "An internal flight operations platform built to manage passive flight segments, flight details, confirmation numbers, ticket numbers, and operational booking data for company workflows.",
-      "tech": ["React.js", "MongoDB", "PHP", "JavaScript", "Twig", "RESTful APIs"],
-      "highlights": [
-        "Worked on passive flight segment management for handling flight-related booking data.",
-        "Implemented features to add, update, and delete flight segments based on operational requirements.",
-        "Developed confirmation number and e-ticket number update workflows for booking verification.",
-        "Created dynamic ticket and confirmation templates using Twig for real-time flight data rendering.",
-        "Improved internal team efficiency by simplifying flight data updates and booking confirmation management."
+      id: "flight-reservation-management",
+      title: "Flight Reservation Management System",
+      role: "Frontend Developer",
+      period: "2025",
+      status: "PRODUCTION",
+      featured: false,
+      category: "Airline Reservation Platform",
+      description:
+        "An enterprise airline reservation platform developed to streamline flight booking operations, passenger management, reservation workflows, ticket generation, and airline data processing. The system supports internal airline teams by automating booking-related operations and integrating multiple travel service APIs.",
+
+      tech: [
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "AJAX",
+        "MongoDB",
+        "Twig",
+        "REST APIs"
       ],
-      "links": {
-        "live": ""
+
+      highlights: [
+        "Developed and maintained airline reservation modules for handling passenger booking workflows and operational flight data.",
+        "Implemented Passive Segment management to improve reservation processing and flight itinerary tracking.",
+        "Built confirmation number and e-ticket generation workflows for booking verification and airline operations.",
+        "Created dynamic airline ticket templates using Twig to generate booking confirmations with real-time flight information.",
+        "Integrated multiple travel APIs to synchronize reservation data and improve operational efficiency.",
+        "Used AJAX to enable seamless asynchronous updates without full page reloads, improving the overall user experience."
+      ],
+
+      links: {
+        live: ""
       }
     },
     {
-      "id": "phone-booking",
-      "title": "Phone Booking System",
-      "role": "Web Developer",
-      "period": "2025",
-      "status": "INTERNAL",
-      "featured": true,
-      "category": "Internal Booking Tool",
-      "description": "An internal phone-based flight booking system designed for company colleagues to manage customer flight bookings through call-based assistance.",
-      "tech": ["PHP", "MongoDB", "HTML", "CSS", "JavaScript", "RESTful APIs"],
-      "highlights": [
-        "Worked on an internal booking workflow used by company team members, not public users.",
-        "Supported phone-based flight booking operations where colleagues book flights for customers over calls.",
-        "Developed and maintained booking-related UI screens and backend data handling workflows.",
-        "Implemented add, update, and management functionality for customer and flight booking information.",
-        "Helped improve internal booking operations by making data entry and booking management smoother."
+      id: "phone-booking-system",
+      title: "Phone Booking System",
+      role: "Frontend Developer",
+      period: "2025",
+      status: "INTERNAL",
+      featured: false,
+      category: "Customer Booking Platform",
+      description:
+        "An internal booking platform developed for customer support teams to manage airline reservations through phone-assisted booking workflows. The application simplifies customer information management, reservation processing, and booking updates while improving operational efficiency.",
+
+      tech: [
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "MongoDB",
+        "REST APIs"
       ],
-      "links": {
-        "live": ""
+
+      highlights: [
+        "Developed responsive booking interfaces for internal customer support representatives.",
+        "Implemented customer booking workflows including reservation creation, modification, and management.",
+        "Built modules for maintaining passenger details, booking records, and reservation history.",
+        "Integrated backend APIs to synchronize booking information and operational data.",
+        "Improved internal booking efficiency by simplifying daily reservation management tasks."
+      ],
+
+      links: {
+        live: ""
       }
     },
     {
-      "id": "travel-services",
-      "title": "Travel Services Website",
-      "role": "Web Developer",
-      "period": "2025",
-      "status": "LIVE",
-      "featured": false,
-      "category": "Travel Booking Platform",
-      "description": "A travel services platform for hotel, car, and cruise booking pages, built with third-party API integrations to fetch and manage real-time travel service data.",
-      "tech": ["PHP", "MongoDB", "HTML", "CSS", "JavaScript", "Kayak API", "Revelex API"],
-      "highlights": [
-        "Integrated Revelex API for cruise search and booking-related data connectivity.",
-        "Integrated Kayak APIs for hotel and car service data handling.",
-        "Worked on frontend and backend improvements for hotel, car, and cruise booking pages.",
-        "Implemented API-based data rendering to improve travel service availability and user experience.",
-        "Maintained responsive UI components using HTML, CSS, and JavaScript."
+      id: "travel-booking-platform",
+      title: "Travel Booking Platform",
+      role: "Frontend Developer",
+      period: "2025",
+      status: "LIVE",
+      featured: false,
+      category: "Travel Services Platform",
+      description:
+        "A travel services platform providing hotel, car rental, and cruise booking experiences through real-time third-party travel API integrations. The platform enables users to search, compare, and access travel services using responsive web interfaces.",
+
+      tech: [
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "MongoDB",
+        "Kayak API",
+        "Revelex API"
       ],
-      "links": {
-        "hotel": "https://www.airtkt.com/hotels.php",
-        "car": "https://www.airtkt.com/car.php",
-        "cruise": "https://www.airtkt.com/cruise.php"
+
+      highlights: [
+        "Integrated Kayak APIs to support hotel and car rental search functionality.",
+        "Implemented Revelex API integration for cruise booking services and travel data synchronization.",
+        "Developed responsive booking pages for hotel, car rental, and cruise services.",
+        "Optimized API-driven content rendering to improve travel search performance and user experience.",
+        "Maintained reusable frontend components and booking workflows across multiple travel service modules."
+      ],
+
+      links: {
+        hotel: "https://www.airtkt.com/hotels.php",
+        car: "https://www.airtkt.com/car.php",
+        cruise: "https://www.airtkt.com/cruise.php"
       }
     },
     {
-      "id": "operations-monitoring-portals",
-      "title": "Operations Monitoring Portals",
-      "role": "Full Stack Developer",
-      "period": "2026",
-      "status": "INTERNAL",
-      "featured": false,
-      "category": "Monitoring & Management System",
-      "description": "A set of internal monitoring portals created to track and manage operational data related to web airline, PNR, ANC airline, and insurance workflows.",
-      "tech": ["React.js", "MongoDB", "JavaScript", "RESTful APIs", "HTML", "CSS"],
-      "highlights": [
-        "Built internal portals to monitor web airline, PNR, ANC airline, and insurance-related data.",
-        "Implemented CRUD functionality including add, edit, update, delete, and data monitoring workflows.",
-        "Created React.js-based dashboards for internal teams to view and manage operational records.",
-        "Connected frontend screens with MongoDB and APIs for real-time data access and management.",
-        "Improved internal visibility by centralizing multiple operational monitoring workflows in one system."
+      id: "operations-monitoring-dashboard",
+      title: "Operations Monitoring Dashboard",
+      role: "Frontend Developer",
+      period: "2026",
+      status: "INTERNAL",
+      featured: false,
+      category: "Enterprise Dashboard",
+      description:
+        "A centralized internal monitoring dashboard developed to manage operational data across airline bookings, PNR records, ANC services, insurance workflows, and web airline operations. The platform provides internal teams with real-time visibility and streamlined operational management.",
+
+      tech: [
+        "React.js",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "MongoDB",
+        "REST APIs"
       ],
-      "links": {
-        "live": ""
+
+      highlights: [
+        "Developed React-based dashboards for monitoring airline operations and business workflows.",
+        "Implemented complete CRUD functionality for operational records including airline, PNR, ANC, and insurance data.",
+        "Integrated REST APIs and MongoDB services to provide real-time operational information.",
+        "Designed reusable dashboard components for consistent data visualization and management.",
+        "Improved operational efficiency by consolidating multiple monitoring systems into a centralized management platform."
+      ],
+
+      links: {
+        live: ""
       }
     }
   ],
+
   education: [
     {
-      degree: "Master of Computer Science",
-      institution: "Indira Gandhi University, Rewari, India",
-      period: "Jul 2021 - Jul 2023",
-      status: "[GRADUATED]"
+      degree: "Master of Computer Science (M.C.S.)",
+      institution: "Indira Gandhi University, Rewari, Haryana, India",
+      period: "Jul 2021 – Jul 2023",
+      status: "Graduated",
+      description:
+        "Specialized in computer science fundamentals including software engineering, database management systems, web technologies, programming, and application development."
     },
     {
       degree: "Bachelor of Science (PCM)",
-      institution: "Ahir College, Rewari, India",
-      period: "Jul 2017 - Jul 2020",
-      status: "[GRADUATED]"
+      institution: "Ahir College, Rewari, Haryana, India",
+      period: "Jul 2017 – Jul 2020",
+      status: "Graduated",
+      description:
+        "Studied Physics, Chemistry, and Mathematics while building a strong analytical and problem-solving foundation that supported my transition into software development."
     }
   ],
+
   certifications: [
     {
-      name: "Web Technologies Professional Certification",
-      authority: "Qspider Gurugram / Partner",
-      details: "Comprehensive training in HTML5, CSS3, JavaScript (ES6+), React.js, and MySQL database administration."
+      name: "Web Technologies Certification",
+      provider: "QSpiders, Gurugram",
+      year: "2022",
+      credential: "Professional Training",
+      description:
+        "Completed comprehensive training in frontend and web development covering HTML5, CSS3, JavaScript (ES6+), React.js, MySQL, responsive web development, REST API integration, and modern software development practices."
     }
   ],
+  
   bootLogs: [
-    "LOADING KERNEL 5.15.0-76-GENERIC...",
-    "DETECTING MONOSPACE MONITOR... [OK]",
-    "MOUNTING REUSABLE COMPONENT FRAMEWORK... [OK]",
-    "INDEXING DEVELOPER PROFILE DATA... [OK]",
-    "FETCHING CLIENT CREDENTIALS: YOGESH... [OK]",
-    "ESTABLISHING PHOSPHOR GREEN TERMINAL... [OK]",
-    "PORTFOLIO CLI CONFIGURED AND DEPLOYED... [OK]"
+    "Initializing Portfolio Engine...",
+    "Loading Frontend Modules...                                  [OK]",
+    "Loading React Runtime...                                     [OK]",
+    "Initializing Component Architecture...                       [OK]",
+    "Optimizing Performance...                                    [OK]",
+    "Portfolio Ready."
   ]
 };
